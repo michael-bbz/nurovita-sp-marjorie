@@ -10758,13 +10758,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ══════════════════════════════════════════════
   // Change mechanism heading (was duplicate of condition cards heading)
-  var mechHeadingBr = document.getElementById('cc-id-TCyB4d40h0Kc');
-  if (mechHeadingBr && mechHeadingBr.parentNode) {
-    mechHeadingBr.parentNode.childNodes.forEach(function(n) {
-      if (n.nodeType === 3 && n.textContent.trim().indexOf('Watch Your Legs') !== -1) {
-        n.textContent = 'Why This Works When Pills Didn\u2019t';
-      }
-    });
+  var mechHeadingEl = document.getElementById('cc-id-NC8UqPglxFgp');
+  if (mechHeadingEl) {
+    mechHeadingEl.innerHTML = 'Why This Works When Pills Didn\u2019t';
   }
 
   // UPDATE MECHANISM COPY — agent-approved rewrites
