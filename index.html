@@ -10183,7 +10183,7 @@ document.addEventListener('DOMContentLoaded', function() {
       <h1 class="nv-hero-h1">Finally Get Your Swollen Legs Back to Normal, Or Your Money Back</h1>
 
       <!-- Subtext -->
-      <p class="nv-hero-sub">The 30-second European cooling ritual that works directly where pills and compression socks can't reach — inside your weakened vein walls.</p>
+      <p class="nv-hero-sub">The 30-second European cooling ritual that works directly where water pills and compression socks can't reach — inside your weakened vein walls.</p>
 
       <!-- CTA -->
       <a href="#nv-best-offer" class="nv-hero-cta">Get 67% Off Today <span class="nv-hero-cta-arrow">&rarr;</span></a>
@@ -10757,6 +10757,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ══════════════════════════════════════════════
+  // Change mechanism heading (was duplicate of condition cards heading)
+  var mechHeadingBr = document.getElementById('cc-id-TCyB4d40h0Kc');
+  if (mechHeadingBr && mechHeadingBr.parentNode) {
+    mechHeadingBr.parentNode.childNodes.forEach(function(n) {
+      if (n.nodeType === 3 && n.textContent.trim().indexOf('Watch Your Legs') !== -1) {
+        n.textContent = 'Why This Works When Pills Didn\u2019t';
+      }
+    });
+  }
+
   // UPDATE MECHANISM COPY — agent-approved rewrites
   // ══════════════════════════════════════════════
 
@@ -11328,7 +11338,7 @@ document.addEventListener('DOMContentLoaded', function() {
       + buildCard({ headerClass:'light', title:'Single Roller', label:'Introductory', sublabel:'Perfect if you want to test it out first', img:img1x, total:'$41.95', was:'$59.95', save:'30%', perunit:'$41.95/ea', routeId:'1x one-time', routeTitle:'1x one-time', href:'https://offer.trynurovita.com/lymphatic-dtv1-checkout1a' });
 
     // Subscribe cards — order: 1-Month (left), 2-Month Best Value (middle), Single (right)
-    var subCards = buildCard({ headerClass:'light', title:'1-Month Supply', label:'Most Popular', sublabel:'Our recommended supply to see real, lasting results', img:img2x, total:'$49.95', was:'$90.90', save:'50%', perunit:'$24.98/ea', routeId:'2x-sub', routeTitle:'2x subscription', href:'https://offer.trynurovita.com/lymphatic-dtv1-checkout2b' })
+    var subCards = buildCard({ headerClass:'light', title:'1-Month Supply', label:'Most Popular', sublabel:'Our recommended supply to see real, lasting results', img:img2x, total:'$49.95', was:'$99.90', save:'50%', perunit:'$24.98/ea', routeId:'2x-sub', routeTitle:'2x subscription', href:'https://offer.trynurovita.com/lymphatic-dtv1-checkout2b' })
       + buildCard({ headerClass:'navy', title:'2-Month Supply', label:'Best Value', sublabel:'Maximize results and savings with a full two-month supply', img:img3x, total:'$89.90', was:'$269.70', save:'67%', perunit:'$22.48/ea', routeId:'3x-sub', routeTitle:'3x subscription', cardId:'nv-best-offer', href:'https://offer.trynurovita.com/lymphatic-dtv1-checkout3b' })
       + buildCard({ headerClass:'light', title:'Single Roller', label:'Introductory', sublabel:'Perfect if you want to test it out first', img:img1x, total:'$34.95', was:'$59.95', save:'42%', perunit:'$34.95/ea', routeId:'1x-sub', routeTitle:'1x subscription', href:'https://offer.trynurovita.com/lymphatic-dtv1-checkout1b' });
 
